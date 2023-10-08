@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+#wrapper {
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: start;
+  transition: all 1s ease-out;
+}
+
+#wrapper .box {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+
+#quote-box {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 550px;
+  height: auto;
+  padding: 32px 46px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+#quote-box .text-box {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.75em;
+  line-height: 1.2;
+  transition: all 1s ease-out;
+}
+
+/* #quote-box .text-box .quote {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+} */
+
+#quote-box .author-box {
+  text-align: right;
+  transition: all 1s ease-out;
+}
+
+#wrapper .button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#wrapper .button-box .social-box,
+#wrapper .button-box .change-quote-box {
+  border-radius: 3px;
+}
+
+#wrapper .button-box .social-box {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+}
+
+#wrapper .button-box .social-box a,
+#wrapper .button-box .change-quote-box button {
+  border-radius: 3px;
+  text-decoration: none;
+  color: white;
+  transition: all 2s ease-out;
+  border: none;
+  padding: 10px 15px;
+  outline: none;
+}
+
+#wrapper .button-box .change-quote-box button {
+  padding: 8px 18px 6px 18px;
+  cursor: pointer;
+  height: 38px;
+}
+
+#wrapper .button-box .change-quote-box button:hover {
+  background-color: #fff;
+}
+
+/* #wrapper .button-box button {
+} */
+
+.copyright {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
