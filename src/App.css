@@ -101,3 +101,9 @@
   text-decoration: none;
   font-weight: 500;
 }
+
+@media(max-width: 550px) {
+  #quote-box {
+    width: 353px;
+  }
+}
