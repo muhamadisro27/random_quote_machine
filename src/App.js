@@ -23,11 +23,13 @@ function App() {
     },
   };
 
-  const newQuote = async () => {
+  const newQuote = async ({signal}) => {
     setOpacity(0);
     try {
       await axios
-        .get("https://api.quotable.io/quotes/random")
+        .get("https://api.quotable.io/quotes/random", {
+          signal,
+        })
         .then((response) => {
           if (response.status === 200) {
             setColor(math_random);
@@ -45,7 +47,11 @@ function App() {
   };
 
   useEffect(() => {
-    newQuote();
+    const controller = new AbortController();
+
+    newQuote(controller);
+
+    return () => controller.abort();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
